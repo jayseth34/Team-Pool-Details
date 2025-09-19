@@ -636,6 +636,13 @@
                 this.setupOverlayButton();
 
             }
+            setupOverlayButton() {
+                const overlayButton = document.getElementById("overlayButton");
+                if (overlayButton) {
+                    const overlayUrl = `https://ovsoverlaysportyfy.netlify.app/?tournamentId=${this.tournamentId}`;
+                    overlayButton.href = overlayUrl;
+                }
+            }
 
             getTournamentIdFromUrl() {
                 const urlParams = new URLSearchParams(window.location.search);
